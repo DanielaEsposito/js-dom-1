@@ -13,13 +13,21 @@ const myFigurElement = document.getElementById ("img-container");
 //recupero il tag img
 const myCustumImg = document.createElement ('img');
 myCustumImg.src = "./img/white_lamp.png";
+myCustumImg.add = ("img-fluid");
 
 //aggiungo il nodo dell'immagine al nodo figure
 myFigurElement.append(myCustumImg);
 
 //click function
 myButtonEl.addEventListener("click", () =>{
-    myButtonEl.innerHTML= "Spegni";
-    myCustumImg.src ="./img/yellow_lamp.png";
+    if (myButtonEl.textContent === "Accendi"){
+         myCustumImg.src ="./img/yellow_lamp.png";
+    myButtonEl.textContent= "Spegni"
     }
-    )
+   else{
+     myCustumImg.src ="./img/white_lamp.png";
+    myButtonEl.textContent= "Accendi"
+   }
+    
+    }
+    );
